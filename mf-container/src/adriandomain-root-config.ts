@@ -6,6 +6,12 @@ registerApplication({
   activeWhen: ["/"]
 });
 
+registerApplication({
+  name: "@adriandomain/mf-main",
+  app: () => System.import<LifeCycles>("@adriandomain/mf-main"),
+  activeWhen: ["/"]
+});
+
 start({
   urlRerouteOnly: true,
 });

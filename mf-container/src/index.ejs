@@ -50,7 +50,8 @@
     {
       "imports": {
         "@adriandomain/root-config": "//localhost:9000/adriandomain-root-config.js",
-        "@adriandomain/mf-header": "//localhost:4200/main.js"
+        "@adriandomain/mf-header": "//localhost:4200/main.js",
+        "@adriandomain/mf-main": "//localhost:4203/main.js"
       }
     }
   </script>
@@ -76,7 +77,12 @@
   <noscript>
     You need to enable JavaScript to run this app.
   </noscript>
-  <main></main>
+  <header>
+    <section id="single-spa-application:@adriandomain/mf-header"></section>
+  </header>
+  <main>
+    <section id="single-spa-application:@adriandomain/mf-main"></section>
+  </main>
   <script>
     System.import('@adriandomain/root-config');
   </script>
