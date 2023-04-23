@@ -12,6 +12,12 @@ registerApplication({
   activeWhen: ["/"]
 });
 
+registerApplication({
+  name: "@adriandomain/mf-react",
+  app: () => System.import<LifeCycles>("@adriandomain/mf-react"),
+  activeWhen: ["/"]
+});
+
 start({
   urlRerouteOnly: true,
 });

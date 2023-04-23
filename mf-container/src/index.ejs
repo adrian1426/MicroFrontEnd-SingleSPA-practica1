@@ -36,7 +36,9 @@
   <script type="systemjs-importmap">
     {
       "imports": {
-        "single-spa": "https://cdn.jsdelivr.net/npm/single-spa@5.9.0/lib/system/single-spa.min.js"
+        "single-spa": "https://cdn.jsdelivr.net/npm/single-spa@5.9.0/lib/system/single-spa.min.js",
+        "react": "https://cdn.jsdelivr.net/npm/react@17.0.2/umd/react.production.min.js",
+        "react-dom": "https://cdn.jsdelivr.net/npm/react-dom@17.0.2/umd/react-dom.production.min.js"
       }
     }
   </script>
@@ -51,7 +53,8 @@
       "imports": {
         "@adriandomain/root-config": "//localhost:9000/adriandomain-root-config.js",
         "@adriandomain/mf-header": "//localhost:4200/main.js",
-        "@adriandomain/mf-main": "//localhost:4203/main.js"
+        "@adriandomain/mf-main": "//localhost:4203/main.js",
+        "@adriandomain/mf-react": "//localhost:8500/adriandomain-mf-react.js"
       }
     }
   </script>
@@ -61,6 +64,7 @@
     If you need to support Angular applications, uncomment the script tag below to ensure only one instance of ZoneJS is loaded
     Learn more about why at https://single-spa.js.org/docs/ecosystem-angular/#zonejs
   -->
+      <!-- Angular -->
       <script src="https://cdn.jsdelivr.net/npm/zone.js@0.11.3/dist/zone.min.js"></script>
 
       <script src="https://cdn.jsdelivr.net/npm/import-map-overrides@2.2.0/dist/import-map-overrides.js"></script>
@@ -80,6 +84,7 @@
   <header>
     <section id="single-spa-application:@adriandomain/mf-header"></section>
   </header>
+  <section id="single-spa-application:@adriandomain/mf-react"></section>
   <main>
     <section id="single-spa-application:@adriandomain/mf-main"></section>
   </main>
